@@ -40,9 +40,9 @@ int otab(int n){
     int prev =1;
 
     for(int i = 2 ; i< n ; i++){
-        int curi = prev + prev2;
+        int curr = prev + prev2;
         prev2 = prev;
-        prev = curi;
+        prev = curr;
     }
     return prev;
 }
