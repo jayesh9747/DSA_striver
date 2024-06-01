@@ -5,7 +5,7 @@
 using namespace std;
 
 
-void NextSmallerElement(vector<int>v,vector<int>&ans){
+void PrevSmallerElement(vector<int>v,vector<int>&ans){
     stack <int> st;
     st.push(-1);
     for(int i = 0 ; i < v.size(); i++){
@@ -18,19 +18,17 @@ void NextSmallerElement(vector<int>v,vector<int>&ans){
 
         st.push(curr);
     }
-  
-
 }
 
 
 
 int main(){
 
-    vector <int> temp = {2,3,4,1};
+    vector <int> temp = {1,1};
 
     vector<int>ans;
 
-    NextSmallerElement(temp,ans);
+    PrevSmallerElement(temp,ans);
 
     for(int i = 0 ; i < ans.size(); i++){
         cout<< ans[i]<<" ";
