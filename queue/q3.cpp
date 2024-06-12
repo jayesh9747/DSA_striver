@@ -22,7 +22,7 @@ int main(){
         int top = st.top();
         st.pop();
         cout << top << endl; // Changed st.top() to top
-        // No need to push elements back into the queue here
+    
     }
 
     return 0;
