@@ -4,24 +4,24 @@
 using namespace std;
 
 
-void InsertInSortedPostion(stack<int> &St ,int top){
+void InsertInSortedPostion(stack<int> &st ,int top){
 
-    if(St.empty()){
-        St.push(top);
+    if(st.empty()){
+        st.push(top);
         return;
     }
-    if(St.top()>= top){
-        St.push(top);
+    if(st.top()>= top){
+        st.push(top);
         return;
     }
 
-    int t = St.top();
+    int t = st.top();
 
-    St.pop();
+    st.pop();
 
-    InsertInSortedPostion(St,top);
+    InsertInSortedPostion(st,top);
 
-    St.push(t);
+    st.push(t);
    
 }
 
@@ -42,11 +42,6 @@ void SortTheStack(stack<int> &St){
     InsertInSortedPostion(St,topEle);
     
 }
-
-
-
-
-
 
 
 int main(){

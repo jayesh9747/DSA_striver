@@ -22,7 +22,7 @@ class circularQueue{
     void push(int val){
         //overflow cond 
 
-        if((front == -1 && rear == size-1)||( rear = front -1)){
+        if((front == -1 && rear == size-1)||( rear == front -1)){
             cout << "Queue Overflow"<<endl;
         }
         //initial situation

@@ -12,6 +12,7 @@ public:
         for(int i = 0 ; i < coins.size(); i++){
 
             int recans = 0;
+            // idhar hi negative wali condition handle ki gai hai 
             if(amount - coins[i] >=0){
                 recans =  sloveusingRec(coins , amount - coins[i]) ;
                 if(recans != INT_MAX){

@@ -9,7 +9,29 @@ public:
         }
 
         int ans = INT_MAX;
+    int solveusingRec(string a , string b, int i , int j){
 
+        // base case
+        if(i == a.length()){
+            return b.length() - j;
+        }
+        if(j == b.length()){
+            return a.length() - i;
+        }
+
+        int ans = 0;
+        // character matching
+        if(a[i] == b[j]){
+            ans = 0 + solveusingRec(a,b ,i+1, j+1);
+        }else{
+            int replace = 1 + solveusingRec(a,b ,i+1, j+1);
+            int remove = 1 + solveusingRec(a,b ,i+1, j);
+            int insert = 1 +  solveusingRec(a,b ,i, j+1);
+            ans = min(insert , min(remove, replace));
+        }
+        return ans;
+
+    }
         for( int i = start ; i <= end ; i++){
             ans = min(ans , i + max(sloveusingRec(start, i -1), sloveusingRec(i+1, end) ) );
         }

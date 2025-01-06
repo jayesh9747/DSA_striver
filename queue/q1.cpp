@@ -29,6 +29,7 @@ public:
         {
             if (rear == -1 && front == -1)
             {
+                // if we insert the first element 
                 front++;
                 rear++;
                 arr[rear] = val;
@@ -43,9 +44,10 @@ public:
 
     void pop(){
         if(front == -1 && rear == -1){
-           cout << " Queue Underflow"<<endl;
+           cout << " Queue Underflow "<<endl;
            return; 
         }else if(front == rear){
+            // if we  remove the last element of the Queue 
             arr[front] = -1;
             front = -1;
             rear = -1 ;

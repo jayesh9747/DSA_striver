@@ -1,3 +1,11 @@
+/*
+
+Time Complexity (TC): O(V + E)
+
+Space Complexity (SC): O(V)
+
+*/
+
 vector<int> bfsTraversal(int n, vector<vector<int>> &adj){
 
      // Step 1: Create a queue
@@ -58,10 +66,3 @@ vector<int> bfsTraversal(int n, vector<vector<int>> &adj){
 
 }
 
-/*
-
-Time Complexity (TC): O(V + E)
-
-Space Complexity (SC): O(V)
-
-*/

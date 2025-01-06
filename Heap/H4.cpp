@@ -1,4 +1,4 @@
-// is CBT valid heap or NOT ? 
+//                       
 
 
 #include<bits/stdc++.h>

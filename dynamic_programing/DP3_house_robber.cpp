@@ -3,7 +3,7 @@ public:
 
     int slove(vector<int> & nums , int index){
 
-        // Base Condtion 
+        // Base Condition 
         if (index > nums.size()-1){
             return 0;
         }
