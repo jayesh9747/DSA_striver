@@ -36,6 +36,7 @@ public:
             if(root->right != NULL ){
                 recurrsion(root->right,leval+1,ans);
             }
+            // yaha per else if nahi likhna hai
             if(root->left != NULL){
                 recurrsion(root->left,leval+1,ans);
             }

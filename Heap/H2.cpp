@@ -7,7 +7,6 @@ using namespace std;
 
 void heapify(vector<int> &v, int n, int i)
 {
-    int ind = i;
     int leftInd = 2 * i;
     int rightInd = 2 * i + 1;
     int maxi = i;
@@ -29,19 +28,20 @@ void heapify(vector<int> &v, int n, int i)
     return;
 }
 
-
-void heapSort(vector<int>& v , int n){
-    int size = n-1;
-    for (int i = size ; i > 1 ; i--){
-        swap(v[i],v[1]);
-        heapify(v,size--,1);
+void heapSort(vector<int> &v, int n)
+{
+    int size = n - 1;
+    for (int i = size; i > 1; i--)
+    {
+        swap(v[i], v[1]);
+        heapify(v, size--, 1);
     }
 }
 
 int main()
 {
 
-    vector<int> a = {0, 1, 2,6,7,8,9,10,3, 4, 5};
+    vector<int> a = {0, 1, 2, 6, 7, 8, 9, 10, 3, 4, 5};
 
     int n = a.size();
 
@@ -50,7 +50,7 @@ int main()
         heapify(a, n, i);
     }
 
-    heapSort(a,n);
+    heapSort(a, n);
 
     // Print the heapified array
     for (auto it : a)

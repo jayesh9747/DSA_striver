@@ -95,7 +95,7 @@ void levelOrderTraversal(Node *root)
     q.push(root);
     q.push(NULL);
 
-    while (q.size() > 1)
+    while (q.size() > 1) // yaha per har bar glalti hoti hai dhayan rakhna
     {
 
         Node *front = q.front();

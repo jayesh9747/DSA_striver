@@ -39,7 +39,7 @@ public:
             auto top = q.front();
             q.pop();
 
-            Node *front = top.fisrt;
+            Node *front = top.first;
             int h = top.second;
 
             if (mp.find(h) == mp.end())
